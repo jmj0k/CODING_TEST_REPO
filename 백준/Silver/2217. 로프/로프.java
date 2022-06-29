@@ -4,10 +4,8 @@ class Main {
 	public static int solution(int[] arr) {
 		Arrays.sort(arr);
 		int maxWeight = 0; 
-		for (int i = 0; i < arr.length; i++) {
-			maxWeight = Math.max(maxWeight, arr[i]);
-			maxWeight = Math.max(maxWeight, arr[i] * (arr.length - i));
-			
+		for (int i = 1; i <= arr.length; i++) {
+			maxWeight = Math.max(maxWeight, arr[arr.length - i] * i);
 		}
 		return maxWeight;
 	}
