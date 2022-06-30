@@ -24,8 +24,8 @@ class Main {
     	int n = sc.nextInt();
     	int[][] arr = new int[n][2];
     	for (int i = 0; i < n; i++) {
-    		arr[i][0] = Integer.parseInt(sc.nextInt() + "" + String.format("%02d", sc.nextInt()));
-    		arr[i][1] = Integer.parseInt(sc.nextInt() + "" + String.format("%02d", sc.nextInt()));
+    		arr[i][0] = sc.nextInt() * 100 + sc.nextInt();
+    		arr[i][1] = sc.nextInt() * 100 + sc.nextInt();
     	}
     	System.out.println(solution(arr));
 	}
